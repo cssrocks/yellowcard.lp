@@ -1,0 +1,703 @@
++font('BrutalType', 'BrutalType-Regular')
++font('BrutalType Medium', 'BrutalType-Medium')
++font('BrutalType Light', 'BrutalType-Light')
++font('BrutalType Bold', 'BrutalType-Bold')
+
+=bt
+	font-family: "BrutalType", Arial, sans-serif
+	font-weight: normal
+	font-style: normal
+=btm
+	font-family: "BrutalType Medium", Arial, sans-serif
+	font-weight: normal
+	font-style: normal
+=btl
+	font-family: "BrutalType Light", Arial, sans-serif
+	font-weight: normal
+	font-style: normal
+=btb
+	font-family: "BrutalType Bold", Arial, sans-serif
+	font-weight: normal
+	font-style: normal
+
+body
+	+bt
+	font-size: 14px
+	line-height: 20px
+	color: #4a4a4a
+	background: #fff
+	min-width: 1200px
+	+font-smoothing
+	&.homepage
+		font-size: 20px
+
+.clear
+	+clr
+
+.l-container
+	position: relative
+	+clr
+	width: 1100px
+	margin-left: auto
+	margin-right: auto
+
+.l-layout
+	+clr
+
+.h1
+	+bt
+	font-size: 100px
+	line-height: 1
+
+.h2
+	+btm
+	font-size: 60px
+	line-height: 1
+
+.btn
+	+btm
+	display: inline-block
+	padding: 18px 22px
+	line-height: 31px
+	border: 4px solid #fdc911
+	+border-radius(15px)
+	+transition(all 150ms linear)
+	color: #4a4a4a
+	font-size: 28px
+	text-decoration: none
+	white-space: nowrap
+	&:hover
+		background: #fdc911
+		color: #fff
+
+.icon
+	display: inline-block
+	vertical-align: middle
+	&.icon_login
+		+s(key)
+	&.icon_numbers
+		+svg(numbers, 72, 47)
+		// .no-retina &
+		// 	+s(numbers)
+	&.icon_heart
+		+svg(heart, 62, 56)
+		// .no-retina &
+		// 	+s(heart)
+	&.icon_car
+		+svg(car, 68, 48)
+		// .no-retina &
+		// 	+s(car)
+	&.icon_phone
+		+svg(phone, 46, 60)
+		// .no-retina &
+		// 	+s(phone)
+
+.b-intro
+	overflow: hidden
+	background-color: #e8f4fb
+	+background-image(radial-gradient(center center, 300px 300px, #fff 0%, #e8f3fb 100%))
+	.h1
+		margin-bottom: 40px
+	.b-intro__unit
+		width: 560px
+		// opacity: 0
+		// +animation-delay(0.3s)
+		// visibility: hidden
+		p
+			margin-right: 140px
+			margin-bottom: 80px
+			font-size: 18px
+			line-height: 30px
+			color: #989b9d
+	.b-intro__wrap
+		position: relative
+		padding: 100px 0 65px
+		z-index: 1
+	.b-intro__picture
+		position: absolute
+		bottom: 0
+		right: -78px
+		// visibility: hidden
+		img
+			display: block
+
+.b-user-login
+	position: absolute
+	top: 45px
+	right: 0
+	font-size: 14px
+	z-index: 2
+	.b-user-login__item
+		display: inline-block
+		margin-left: 20px
+		a
+			+btm
+			display: inline-block
+			color: #7a7a7a
+			text-transform: uppercase
+			text-decoration: none
+		.icon
+			margin-right: 7px
+		.icon_login
+			position: relative
+			top: -2px
+
+.b-advantage
+	+clr
+	margin: 90px -40px 0
+	.b-advantage__col
+		float: left
+		width: 50%
+		&.b-advantage__col_right
+			float: right
+			text-align: right
+	.b-advantage__item
+		display: inline-block
+		vertical-align: top
+		text-align: center
+		width: 120px
+		margin: 0 40px
+		font-size: 18px
+		p
+			margin-top: 40px
+	.b-advantage__icon
+		height: 60px
+		line-height: 60px
+		img
+			display: inline-block
+			vertical-align: middle
+			line-height: 1
+
+.support
+	background-color: #087380
+	color: #fff
+	@include background-image(radial-gradient(59% 51%, 500px 500px, #69e3d0 0%, #07737f 99.83%, #07737f 100%))
+	.l-container
+		min-height: 800px
+		padding: 90px 0
+	.h2
+		margin: 0 auto 100px
+		max-width: 560px
+		text-align: center
+	.support__threecol
+		margin-bottom: 70px
+		.l-col1,
+		.l-col3
+			position: relative
+			float: left
+			width: 300px
+			text-align: center
+			min-height: 1px
+
+		.l-col2
+			position: relative
+			float: left
+			width: 460px
+			margin: 0 20px
+			text-align: center
+	.support__lazy
+		position: absolute
+		top: 42px
+		left: 105px
+	.card
+		+svg(card_back, 406, 255)
+		margin: 0 auto
+	.support__tooltip
+		color: #fff
+		position: absolute
+		left: 50%
+		margin-left: -101px
+		bottom: 50%
+		margin-bottom: 35px
+		width: 207px
+		opacity: .4
+		+border-radius(7px 7px 0 0)
+		border: 2px solid #fff
+		padding: 20px 10px 20px 20px
+		text-align: left
+		&:before
+			position: absolute
+			top: 100%
+			left: 100px
+			+s(arrow_a)
+			opacity: 1
+			content: ""
+		&.support__tooltip_mod
+			&:before
+				left: 80px
+				+s(arrow_a2)
+	.suppor__icon
+	.icon_supcall
+		+svg(suptel, 82, 82)
+		margin-top: 88px
+		margin-left: -60px
+	.icon_supusr
+		margin-top: 77px
+		+svg(supusr, 85, 85)
+		margin-left: 90px
+	.support__dots
+		position: absolute
+		bottom: 120px
+		right: 100%
+		+s(supdots)
+		&.support__dots_mod
+			left: 100%
+			right: auto
+	.support__note
+		text-align: center
+		line-height: 1.2
+
+.points
+	background-color: #e8f3fb
+	+background-image(radial-gradient(center center, 500px 500px, #fff 0%, #e8f3fb 100%))
+	.l-container
+		min-height: 800px
+		padding: 90px 0
+	.h2
+		margin: 0 auto 130px
+		max-width: 560px
+		text-align: center
+	.points__threecol
+		// +clr
+		.l-col1,
+		.l-col3
+			position: relative
+			float: left
+			width: 300px
+			text-align: center
+			min-height: 1px
+
+		.l-col2
+			position: relative
+			float: left
+			width: 460px
+			margin: 0 20px
+			text-align: center
+		.card
+			+svg(card_face, 309, 193)
+		.points__reader
+			position: absolute
+			top: 145px
+			right: -25px
+		.points__reader-dots
+			position: absolute
+			top: 58px
+			right: 75px
+			+s(dots)
+		.points__title
+			position: absolute
+			left: 0
+			width: 100%
+			top: 235px
+			strong
+				+btb
+				display: block
+		.points__media
+		.points__count
+			+s(count)
+			margin: 47px auto
+		.points__tooltip
+			color: #949798
+			position: absolute
+			left: 50%
+			margin-left: -101px
+			bottom: 100%
+			margin-bottom: 35px
+			width: 203px
+			+border-radius(7px 7px 0 0)
+			border: 2px solid #c1c7ca
+			padding: 20px 10px 20px 20px
+			text-align: left
+			&:before
+				position: absolute
+				top: 100%
+				left: 100px
+				+s(arrow)
+				content: ""
+			&.points__tooltip_mod
+				&:before
+					left: 80px
+					+s(arrow2)
+		.point__units
+			position: relative
+		.point__units-card
+			position: absolute
+			top: 50%
+			margin-top: -18px
+			left: 50%
+			margin-left: -30px
+			+s(unit_card)
+			z-index: 1
+		.point__list
+			+s(units)
+			margin: 0 auto
+
+.order
+	background-color: #e8f3fb
+	+background-image(radial-gradient(center center, 500px 500px, #fff 0%, #e8f3fb 100%))
+	.h2
+		margin: 0 auto 100px
+		max-width: 500px
+		text-align: center
+	.l-container
+		padding: 80px 0
+		min-height: 800px
+		max-width: 940px
+	.order__price
+		text-align: center
+		font-size: 0
+		padding-bottom: 50px
+		margin-bottom: 50px
+		border-bottom: 2px solid #ececec
+		.card
+			margin-top: 10px
+			+svg(card_face, 208, 130)
+		.order__price-sep
+			display: inline-block
+			vertical-align: top
+			font-size: 70px
+			margin: 68px 70px
+	.order__price-cups
+		display: inline-block
+		vertical-align: top
+		margin-left: -5px
+	.order__price-cup
+		+svg(cup, 90, 147)
+		margin: 0 5px
+	.order__text
+		+clr
+		margin: 0 190px
+	.order__list
+		width: 210px
+		float: left
+		li
+			position: relative
+			padding-left: 15px
+			margin-bottom: 20px
+			font-size: 16px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				content: "\2013"
+	.order__bonus
+		float: right
+		text-align: center
+		font-size: 16px
+		line-height: 24px
+		margin-top: 40px
+		strong
+			display: block
+			font-size: 30px
+			margin-bottom: 5px
+			+btb
+			// line-height: 0
+	.order__action
+		text-align: center
+		margin-top: 70px
+		margin-bottom: 35px
+		.btn
+			padding: 26px 35px
+			font-size: 38px
+	.order__note
+		text-align: center
+		font-size: 13px
+		color: #bfc4c7
+
+.b-magiccard
+	position: relative
+	background-color: #620880
+	+background-image(radial-gradient(center center, 500px 500px, #e9b1ab 0%, #62077f 100%))
+	color: #fff
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: url("../img/pattern1.png")
+		content: ""
+		.no-touch &
+			background-attachment: fixed
+	.l-container
+		padding: 100px 0 100px
+		max-width: 1010px
+		min-height: 800px
+	.h2
+		margin: 0 auto 55px
+		max-width: 590px
+		text-align: center
+	.b-magiccard__legend
+		position: relative
+	.b-magiccard__card
+		position: absolute
+		top: 35px
+		left: 50%
+		margin-left: -220px
+		width: 441px
+		height: 275px
+		+nosel
+		.card
+			position: relative
+			z-index: 1
+			+svg(card_face, 441, 275)
+			// +rotate(180)
+	.b-magiccard__card-shadow
+		left: 50%
+		margin-left: -281px
+		position: absolute
+		top: 140px
+		display: block
+		width: 562px
+		height: 257px
+		background: url("../img/shadow.png") no-repeat
+
+	.item
+		position: relative
+		float: left
+		width: 135px
+		height: 160px
+		&:before
+			position: absolute
+			content: ""
+
+	.item_2,
+	.item_4,
+	.item_6
+		float: right
+
+	.item_5,
+	.item_6
+		height: auto
+
+	.item_1,
+	.item_3,
+	.item_5
+		&:before
+			left: 100%
+			margin-left: 17px
+
+	.item_2,
+	.item_4,
+	.item_6
+		&:before
+			right: 100%
+			margin-right: 17px
+
+	.item_1
+		&:before
+			top: 30px
+			+s(line1)
+	.item_6
+		&:before
+			top: 5px
+			+s(line1)
+			+rotate(180)
+
+	.item_5
+		&:before
+			top: 5px
+			+s(line2)
+	.item_2
+		&:before
+			top: 30px
+			+s(line2)
+			+rotate(180)
+
+	.item_3
+		&:before
+			top: 30px
+			+s(line3)
+	.item_4
+		&:before
+			top: 30px
+			+s(line3)
+			+rotate(180)
+
+.b-app
+	background: #00737e url("../img/app_bg.jpg") 50% 0 no-repeat
+	color: #fff
+	.no-touch &
+		background-attachment: fixed
+		+cover
+	.l-container
+		position: relative
+		padding-top: 130px
+		padding-bottom: 149px
+		min-height: 800px
+		+gpu
+	.b-app__unit
+		width: 450px
+		p
+			margin-right: 95px
+			line-height: 30px
+	.card
+		+svg(card_face, 268, 167)
+		margin-bottom: 100px
+		+nosel
+	.h2
+		+btb
+		margin-bottom: 40px
+	.b-app__download
+		position: absolute
+		bottom: 150px
+		right: 0
+	.b-app__download__label
+		text-transform: uppercase
+		text-align: right
+		margin-right: 5px
+		margin-bottom: 17px
+		font-size: 15px
+	.b-app__ios,
+	.b-app__android
+		display: block !important
+		margin: 7px 0
+	.b-app__ios
+		+svg(appstore, 151, 45)
+	.b-app__android
+		+svg(googlestore, 151, 45)
+
+
+a
+	color: #4a4a4a
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+.link
+	color: #4a4a4a
+	text-decoration: none
+	border-bottom: 1px solid #949494
+	&:hover
+		color: #087380
+		text-decoration: none
+		border-color: #087380
+
+.map
+	position: relative
+	.map__heading
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 1
+		background-color: #fdca12
+		background-color: rgba(#fdca12, .8)
+		text-align: center
+		color: #fff
+		padding: 50px 0
+	.map__content
+	.gmap
+		height: 885px
+		.gm-style
+			+bt
+	.gmap__popup
+		font-size: 14px
+		h3
+			font-size: 18px
+			margin-bottom: 0.5em
+			+btb
+		p
+			margin-bottom: 0.5em
+
+.footer
+	height: 230px
+	font-size: 14px
+	.l-container
+		padding-top: 55px
+	.footer__row
+		+clr
+		margin-top: 40px
+		&:first-child
+			margin-top: 0
+	.footer__partners
+		float: left
+		margin-left: 80px
+		width: 400px
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-left: 30px
+			&:first-child
+				margin-left: 0
+		a
+			display: block
+	.footer__download
+		float: left
+		margin-top: 10px
+		a
+			display: inline-block
+			vertical-align: top
+	.footer__download-ios
+		+svg(appstore_gr, 100, 28)
+	.footer__download-android
+		+svg(googlestore_gr, 100, 28)
+		margin-left: 10px
+	.footer__social
+		float: left
+		margin-top: 10px
+		margin-left: 60px
+		a
+			display: inline-block
+			vertical-align: top
+			+opacity(0.8)
+			+transition(all .3s linear)
+			margin-left: 12px
+			&:first-child
+				margin-left: 0
+			&:hover
+				+opacity(1)
+	.footer__vk
+		+s(vk)
+	.footer__fb
+		+s(fb)
+	.footer__order
+		float: right
+		.btn
+			padding: 5px 19px
+			font-size: 18px
+			+border-radius(13px)
+			border-color: #f2cb12
+			&:hover
+				background: #f2cb12
+	.footer__copy
+		float: left
+		position: relative
+		width: 400px
+		padding-left: 80px
+	.footer__copy-year
+		position: absolute
+		top: 0
+		left: 0
+	.footer__menu
+		float: left
+		margin-left: 80px
+		+clr
+		ul
+			display: inline-block
+			vertical-align: top
+			margin-left: 40px
+			&:first-child
+				margin-left: 0
+		a
+			color: #4a4a4a
+			text-decoration: none
+			border-bottom: 1px solid #949494
+			&:hover
+				color: #087380
+				text-decoration: none
+				border-color: #087380
+
+	.footer__dev
+		float: right
+		width: 115px
+		a
+			+btb
+			text-decoration: none
+			&:hover
+				text-decoration: none
+				color: #087380
+
+
+
+
